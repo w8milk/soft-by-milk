@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>С 8 марта!</title>
+<script>
+var cvety=["img/1.png","img/2.png","img/3.png","img/4.png","img/5.png","img/6.png","img/7.png","img/8.png","img/9.png"];
+var pojel=["СЧАСТЬЯ","ЗДОРОВЬЯ","ХОРОШЕГО НАСТРОЕНИЯ","ПОСЛУШНЫХ ДЕТЕЙ","ЛЮБВИ","ХОРОШЕЙ ЗАРПЛАТЫ","ОТЛИЧНЫХ ДНЕЙ","УЛЫБКИ"];
+function start(){
+var cv=Math.floor(Math.random()*9);
+var poz=Math.floor(Math.random()*8);
+cvetok.src=cvety[cv];
+pozdr.innerHTML=pojel[poz];
+cvetok.width="100";
+interval=setInterval(rost,1);
+}
+function rost(){
+//cvety.width=cvety.width+5; cvety.width+=5;
+cvetok.width++;
+if(cvetok.width=750){
+    cvetok.width=750;
+    clearInterval(interval);
+}
+
+}
+
+
+</script>
+
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body onclick="start();">
+    <h1 id="pozdr" align="center">ДОРОГАЯ МАМОЧКА, ЖЕЛАЮ ТЕБЕ</h1>
+      <table width="800px" height="800px" align="center">
+        <tr>
+            <td ><img src="img/buket.png" alt="" id="cvetok">
+            </td>
+        </tr>
+    </table>
+   
+</body>
+</html>
